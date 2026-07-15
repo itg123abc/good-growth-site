@@ -1,0 +1,24 @@
+Good Growth website v1.2 upload checklist
+
+Upload these files to the root of the GitHub repository:
+
+- index.html
+- styles.css
+- script.js
+- README.md
+- netlify.toml
+- robots.txt
+- favicon.svg
+- ian-goodall-founder-square.jpg
+
+Sanity checks:
+
+- index.html should start with <!doctype html>
+- styles.css should start with :root {
+- script.js should start with const body = document.body;
+- netlify.toml should contain two lines:
+  [build]
+    publish = "."
+
+Do not upload the ZIP file itself.
+Do not upload an extra enclosing folder.

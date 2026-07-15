@@ -132,8 +132,8 @@ h3 {
 .answer-copy,
 .process-copy p,
 .pilot-layout p,
-.founder-copy p,
-.contact-card p {
+.contact-founder-card p,
+.contact-panel p {
   color: var(--color-muted);
   font-size: clamp(1.04rem, 1.5vw, 1.16rem);
 }
@@ -368,8 +368,7 @@ h3 {
 .info-card,
 .benefit-item,
 .pilot-card,
-.founder-card,
-.contact-card {
+.contact-founder-card {
   background: rgba(255, 255, 255, 0.74);
   border: 1px solid var(--color-line);
   border-radius: var(--radius-md);
@@ -626,67 +625,70 @@ h3 {
   border-radius: 50%;
 }
 
-.founder-section {
-  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+/* Combined founder/contact section */
+.contact-founder-section {
+  padding-top: clamp(4rem, 7vw, 6rem);
 }
 
-.founder-card {
+.contact-founder-card {
   display: grid;
-  grid-template-columns: minmax(260px, 0.56fr) minmax(0, 1fr);
-  gap: clamp(1.5rem, 5vw, 4rem);
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
   align-items: center;
-  padding: clamp(1rem, 2vw, 1.2rem);
+  padding: clamp(1.25rem, 4vw, 2rem);
   overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(138, 155, 106, 0.16), transparent 20rem),
+    rgba(255, 255, 255, 0.76);
 }
 
-.founder-image-wrap {
-  min-height: 420px;
-  height: 100%;
-  overflow: hidden;
-  border-radius: calc(var(--radius-md) - 0.35rem);
-  background: var(--color-cream);
+.founder-mini {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 1.75rem);
+  align-items: center;
 }
 
-.founder-image {
-  width: 100%;
-  height: 100%;
-  min-height: 420px;
+.founder-mini-image {
+  width: 180px;
+  height: 226px;
   object-fit: cover;
   object-position: center 22%;
-}
-
-.founder-copy {
-  padding: clamp(0.5rem, 4vw, 2.25rem) clamp(0.5rem, 3vw, 1.75rem) clamp(1.25rem, 3vw, 1.75rem) 0;
+  border-radius: 24px;
+  background: var(--color-cream);
+  box-shadow: 0 14px 30px rgba(36, 52, 36, 0.12);
 }
 
 .founder-role {
-  margin: -0.5rem 0 1.1rem;
+  margin: -0.5rem 0 1rem;
   color: var(--color-forest) !important;
   font-weight: 850;
 }
 
-.contact-section {
-  padding-top: clamp(2rem, 4vw, 3.5rem);
+.contact-panel {
+  padding: clamp(1.25rem, 4vw, 2rem);
+  background: var(--color-forest);
+  border-radius: var(--radius-md);
+  color: var(--color-warm);
 }
 
-.contact-card {
-  padding: clamp(1.6rem, 5vw, 3.5rem);
-  text-align: center;
-  background:
-    radial-gradient(circle at 15% 15%, rgba(138, 155, 106, 0.18), transparent 18rem),
-    var(--color-white);
+.contact-panel .eyebrow {
+  color: #d7dfbd;
 }
 
-.contact-card p {
-  max-width: 640px;
-  margin-inline: auto;
+.contact-panel p {
+  color: rgba(255, 250, 240, 0.78);
+}
+
+.contact-panel h3 {
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
 }
 
 .email-link {
   display: inline-flex;
-  margin-top: 1.4rem;
-  color: var(--color-forest);
-  font-size: clamp(1.18rem, 3vw, 1.62rem);
+  margin-top: 1.2rem;
+  color: var(--color-warm);
+  font-size: clamp(1.08rem, 2.5vw, 1.38rem);
   font-weight: 850;
 }
 
@@ -750,7 +752,7 @@ h3 {
   .solution-layout,
   .process-layout,
   .pilot-layout,
-  .founder-card {
+  .contact-founder-card {
     grid-template-columns: 1fr;
   }
 
@@ -768,13 +770,13 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .founder-copy {
-    padding: 0.75rem 0.75rem 1.4rem;
+  .founder-mini {
+    grid-template-columns: 150px 1fr;
   }
 
-  .founder-image-wrap,
-  .founder-image {
-    min-height: 380px;
+  .founder-mini-image {
+    width: 150px;
+    height: 190px;
   }
 }
 
@@ -810,8 +812,8 @@ h3 {
   }
 
   .main-visual-card,
-  .contact-card,
-  .founder-card {
+  .contact-founder-card,
+  .contact-panel {
     border-radius: 22px;
   }
 
@@ -820,9 +822,13 @@ h3 {
     padding: 0.9rem;
   }
 
-  .founder-image-wrap,
-  .founder-image {
-    min-height: 330px;
+  .founder-mini {
+    grid-template-columns: 1fr;
+  }
+
+  .founder-mini-image {
+    width: min(180px, 70vw);
+    height: 220px;
   }
 
   .footer-inner {
