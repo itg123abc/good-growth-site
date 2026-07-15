@@ -1,29 +1,32 @@
-Good Growth website v1.5 upload checklist
+Good Growth website v1.6 upload checklist
 
-Upload these files to the root of the GitHub repository:
+Upload these files to the root of the GitHub repo:
 
-[ ] index.html
-[ ] styles.css
-[ ] script.js
-[ ] README.md
-[ ] netlify.toml
-[ ] robots.txt
-[ ] favicon.svg
-[ ] ian-goodall-founder-square.jpg
-[ ] UPLOAD_CHECKLIST.txt
+- index.html
+- styles.css
+- script.js
+- README.md
+- netlify.toml
+- robots.txt
+- favicon.svg
+- ian-goodall-founder-square.jpg
+- UPLOAD_CHECKLIST.txt
 
-Do not upload the zip file itself.
-Do not place these files inside a nested folder.
+Do not upload the ZIP file itself.
+Do not place these files inside an extra nested folder.
 
-Sanity check after upload:
+Correct root layout:
 
-- index.html should start with <!doctype html>
-- styles.css should start with :root {
-- netlify.toml should contain:
-
-[build]
-  publish = "."
+index.html
+styles.css
+script.js
+README.md
+netlify.toml
+robots.txt
+favicon.svg
+ian-goodall-founder-square.jpg
+UPLOAD_CHECKLIST.txt
 
 Suggested commit message:
 
-Refine website cards spacing and partner copy
+Refine hero copy process cards and partner boxes

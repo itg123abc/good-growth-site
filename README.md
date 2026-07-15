@@ -1,20 +1,20 @@
-# Good Growth Static Website — V1.5
+# Good Growth Static Website — V1.6
 
 Single-page static website for Good Growth.
 
-V1.5 tightens section copy, fixes card styling, softens the partner section, reduces excess spacing in the problem section, and adjusts the founder/contact image sizing.
+V1.6 tightens the hero support copy, keeps the how-it-works card contrast lighter, updates the customer-value headline, boxes the partner categories, and slightly reduces problem-section spacing.
 
 ## Files
 
-- `index.html` — page content and structure
-- `styles.css` — layout and visual design
+- `index.html` — main page content
+- `styles.css` — visual design and responsive layout
 - `script.js` — mobile navigation and footer year
 - `favicon.svg` — browser icon
-- `robots.txt` — crawler instructions
-- `netlify.toml` — Netlify publish directory
-- `ian-goodall-founder-square.jpg` — founder image
-- `UPLOAD_CHECKLIST.txt` — upload notes
+- `robots.txt` — basic crawler instructions
+- `netlify.toml` — simple Netlify publish setting
+- `ian-goodall-founder-square.jpg` — founder/contact image
+- `UPLOAD_CHECKLIST.txt` — upload reminder
 
 ## Deploy
 
-Upload the files in this folder to the root of the GitHub repository connected to Netlify. Do not upload the ZIP file itself. Netlify should redeploy automatically after the commit to `main`.
+Upload the contents of this folder to the root of the GitHub repository. Do not upload the ZIP file itself. Netlify should redeploy automatically from the `main` branch.
