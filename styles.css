@@ -132,8 +132,7 @@ h3 {
 .answer-copy,
 .process-copy p,
 .pilot-layout p,
-.contact-founder-card p,
-.contact-panel p {
+.contact-founder-card p {
   color: var(--color-muted);
   font-size: clamp(1.04rem, 1.5vw, 1.16rem);
 }
@@ -631,10 +630,9 @@ h3 {
 }
 
 .contact-founder-card {
+  max-width: 860px;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
-  gap: clamp(1.5rem, 4vw, 3rem);
-  align-items: center;
+  gap: 1.25rem;
   padding: clamp(1.25rem, 4vw, 2rem);
   overflow: hidden;
   background:
@@ -642,54 +640,62 @@ h3 {
     rgba(255, 255, 255, 0.76);
 }
 
-.founder-mini {
+.founder-card-row {
   display: grid;
-  grid-template-columns: 180px minmax(0, 1fr);
-  gap: clamp(1rem, 3vw, 1.75rem);
-  align-items: center;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 1.45rem);
+  align-items: start;
 }
 
-.founder-mini-image {
-  width: 180px;
-  height: 226px;
+.founder-wallet-image {
+  width: 112px !important;
+  height: 136px !important;
   object-fit: cover;
   object-position: center 22%;
-  border-radius: 24px;
+  border-radius: 18px;
   background: var(--color-cream);
-  box-shadow: 0 14px 30px rgba(36, 52, 36, 0.12);
+  box-shadow: 0 12px 24px rgba(36, 52, 36, 0.12);
+}
+
+.founder-copy h2 {
+  margin-bottom: 0.28rem;
+  font-size: clamp(1.7rem, 3.5vw, 2.45rem);
 }
 
 .founder-role {
-  margin: -0.5rem 0 1rem;
+  margin: 0 0 0.78rem;
   color: var(--color-forest) !important;
   font-weight: 850;
 }
 
-.contact-panel {
-  padding: clamp(1.25rem, 4vw, 2rem);
-  background: var(--color-forest);
+.contact-divider {
+  height: 1px;
+  background: var(--color-line);
+}
+
+.contact-callout {
+  padding: clamp(1rem, 3vw, 1.45rem);
+  background: rgba(247, 242, 232, 0.72);
+  border: 1px solid var(--color-line);
   border-radius: var(--radius-md);
-  color: var(--color-warm);
 }
 
-.contact-panel .eyebrow {
-  color: #d7dfbd;
-}
-
-.contact-panel p {
-  color: rgba(255, 250, 240, 0.78);
-}
-
-.contact-panel h3 {
-  font-size: clamp(1.35rem, 2.4vw, 2rem);
+.contact-callout h3 {
+  margin-bottom: 0.55rem;
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
 }
 
 .email-link {
   display: inline-flex;
-  margin-top: 1.2rem;
-  color: var(--color-warm);
-  font-size: clamp(1.08rem, 2.5vw, 1.38rem);
+  margin-top: 1rem;
+  color: var(--color-forest-dark);
+  font-size: clamp(1.04rem, 2.2vw, 1.24rem);
   font-weight: 850;
+}
+
+.email-link:hover,
+.email-link:focus-visible {
+  color: var(--color-leaf);
 }
 
 .site-footer {
@@ -770,13 +776,13 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .founder-mini {
-    grid-template-columns: 150px 1fr;
+  .founder-card-row {
+    grid-template-columns: 100px 1fr;
   }
 
-  .founder-mini-image {
-    width: 150px;
-    height: 190px;
+  .founder-wallet-image {
+    width: 100px !important;
+    height: 122px !important;
   }
 }
 
@@ -813,7 +819,7 @@ h3 {
 
   .main-visual-card,
   .contact-founder-card,
-  .contact-panel {
+  .contact-callout {
     border-radius: 22px;
   }
 
@@ -822,13 +828,14 @@ h3 {
     padding: 0.9rem;
   }
 
-  .founder-mini {
-    grid-template-columns: 1fr;
+  .founder-card-row {
+    grid-template-columns: 82px 1fr;
   }
 
-  .founder-mini-image {
-    width: min(180px, 70vw);
-    height: 220px;
+  .founder-wallet-image {
+    width: 82px !important;
+    height: 100px !important;
+    border-radius: 16px;
   }
 
   .footer-inner {

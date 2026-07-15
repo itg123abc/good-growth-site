@@ -1,8 +1,15 @@
-# Good Growth Static Website — V1.2
+# Good Growth Static Website — V1.3
 
-This is a communication-focused revision of the Good Growth static website.
+This revision tightens the homepage after v1.2 feedback.
 
-V1.2 keeps the existing visual identity but tightens the copy, removes instruction-like language, reduces repetition, and combines the founder and contact areas into one cleaner section.
+## What changed in V1.3
+
+- Refocused the Solution section on moving production closer to application, reducing shipped water, and avoiding extra handoffs.
+- Refocused the How It Works section around three practical steps: compact cartridge, reusable reactor, and field application workflow.
+- Moved pilot data / feedback language back into the Pilot Program section by removing it from How It Works.
+- Replaced “More visibility” with “Local ownership and transparency.”
+- Reworked the founder/contact area into one stacked card with a wallet-sized founder image, short bio, pilot/partnership prompt, and email link.
+- Reduced repetition between Solution, Process, and Why It Is Different.
 
 ## Files
 
@@ -28,10 +35,11 @@ GitHub should show these files at the top level, not inside another folder:
 - `robots.txt`
 - `favicon.svg`
 - `ian-goodall-founder-square.jpg`
+- `UPLOAD_CHECKLIST.txt`
 
 Commit message suggestion:
 
-`Tighten homepage copy and combine founder contact section`
+`Tighten solution process and contact sections`
 
 Netlify should redeploy automatically after the commit.
 
@@ -40,4 +48,4 @@ Netlify should redeploy automatically after the commit.
 - No build command is required.
 - The Netlify publish directory is the repository root.
 - The site uses a direct email link to `ian@allgoodgrowth.com` instead of a contact form.
-- Public claims are intentionally conservative because Good Growth is still pilot-stage.
+- Public claims remain conservative because Good Growth is still pilot-stage.
