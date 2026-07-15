@@ -107,6 +107,14 @@ h3 {
   border-block: 1px solid var(--color-line);
 }
 
+.problem-section {
+  padding-block: clamp(3.1rem, 5.2vw, 4.65rem);
+}
+
+.problem-section .question-grid {
+  gap: clamp(1.4rem, 4vw, 3.1rem);
+}
+
 .section-deep {
   color: var(--color-warm);
   background:
@@ -365,7 +373,6 @@ h3 {
 .visual-card,
 .info-card,
 .benefit-item,
-.partner-card,
 .pilot-card,
 .contact-founder-card {
   background: rgba(255, 255, 255, 0.74);
@@ -484,8 +491,7 @@ h3 {
 
 
 .solution-cards,
-.benefit-grid,
-.partner-grid {
+.benefit-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
@@ -493,15 +499,15 @@ h3 {
 
 .info-card,
 .benefit-item,
-.partner-card,
-.pilot-card {
+.pilot-card,
+.partner-card {
   padding: 1.25rem;
 }
 
 .info-card p,
 .benefit-item p,
-.partner-card p,
-.pilot-card p {
+.pilot-card p,
+.partner-card p {
   color: var(--color-muted);
 }
 
@@ -517,11 +523,27 @@ h3 {
 .dark-card {
   color: var(--color-warm);
   background: linear-gradient(135deg, var(--color-forest-dark), var(--color-forest));
+  border-color: rgba(255, 250, 240, 0.18);
+}
+
+.dark-card h3,
+.dark-card p,
+.dark-card .card-number {
+  color: rgba(255, 250, 240, 0.84);
+}
+
+.dark-card h3 {
+  color: var(--color-warm);
+}
+
+.featured-card {
+  color: var(--color-warm);
+  background: linear-gradient(135deg, var(--color-forest-dark), var(--color-forest));
   border-color: rgba(255, 250, 240, 0.2);
 }
 
-.dark-card p,
-.dark-card .card-number {
+.featured-card p,
+.featured-card .card-number {
   color: rgba(255, 250, 240, 0.78);
 }
 
@@ -563,22 +585,42 @@ h3 {
   margin-bottom: 0.28rem;
 }
 
-.benefit-grid,
-.partner-grid {
+.process-step.light-step {
+  color: var(--color-ink);
+  background: var(--color-warm);
+  border-color: rgba(255, 250, 240, 0.7);
+}
+
+.section-deep .process-step.light-step p {
+  color: var(--color-muted);
+}
+
+.process-step.light-step .step-dot {
+  background: var(--color-forest);
+  border-color: #d7dfbd;
+}
+
+.benefit-grid {
   margin-top: 2rem;
 }
 
+.partner-layout .section-heading {
+  margin-inline: auto;
+  text-align: center;
+}
 
 .partner-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.compact-partner-grid .partner-card {
+  padding: 1.05rem;
 }
 
 .partner-card {
   min-height: 100%;
-}
-
-.partner-card h3 {
-  font-size: 1.08rem;
 }
 
 .pilot-layout {
@@ -621,7 +663,7 @@ h3 {
 }
 
 .contact-founder-card {
-  max-width: 760px;
+  max-width: 860px;
   display: grid;
   gap: 1.25rem;
   padding: clamp(1.25rem, 4vw, 2rem);
@@ -633,31 +675,24 @@ h3 {
 
 .founder-card-row {
   display: grid;
-  grid-template-columns: 96px minmax(0, 1fr);
-  gap: clamp(1rem, 3vw, 1.45rem);
-  align-items: start;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 1.6rem);
+  align-items: stretch;
 }
 
 .founder-wallet-image {
-  width: 96px !important;
-  height: 120px !important;
+  width: 180px !important;
+  height: 170px !important;
   object-fit: cover;
   object-position: center 22%;
-  border-radius: 18px;
+  border-radius: 22px;
   background: var(--color-cream);
   box-shadow: 0 12px 24px rgba(36, 52, 36, 0.12);
 }
 
 .founder-copy h2 {
   margin-bottom: 0.28rem;
-  font-size: clamp(1.45rem, 3vw, 2.05rem);
-}
-
-.founder-copy h2 span {
-  color: var(--color-muted);
-  font-size: 0.72em;
-  font-weight: 750;
-  letter-spacing: -0.02em;
+  font-size: clamp(1.7rem, 3.5vw, 2.45rem);
 }
 
 .founder-role {
@@ -672,7 +707,7 @@ h3 {
 }
 
 .contact-callout {
-  padding: clamp(0.95rem, 2.5vw, 1.25rem);
+  padding: clamp(1rem, 3vw, 1.45rem);
   background: rgba(247, 242, 232, 0.72);
   border: 1px solid var(--color-line);
   border-radius: var(--radius-md);
@@ -711,6 +746,12 @@ h3 {
 
 .footer-inner a {
   color: inherit;
+}
+
+@media (max-width: 1080px) {
+  .partner-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 920px) {
@@ -776,12 +817,12 @@ h3 {
   }
 
   .founder-card-row {
-    grid-template-columns: 86px 1fr;
+    grid-template-columns: 138px 1fr;
   }
 
   .founder-wallet-image {
-    width: 86px !important;
-    height: 108px !important;
+    width: 138px !important;
+    height: 132px !important;
   }
 }
 
@@ -828,12 +869,12 @@ h3 {
   }
 
   .founder-card-row {
-    grid-template-columns: 72px 1fr;
+    grid-template-columns: 106px 1fr;
   }
 
   .founder-wallet-image {
-    width: 72px !important;
-    height: 90px !important;
+    width: 106px !important;
+    height: 104px !important;
     border-radius: 16px;
   }
 
