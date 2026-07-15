@@ -1,6 +1,6 @@
 # Good Growth Static Website — V1.3
 
-This revision tightens the homepage after v1.2 feedback.
+This revision tightens the homepage after v1.4 feedback.
 
 ## What changed in V1.3
 
@@ -49,3 +49,8 @@ Netlify should redeploy automatically after the commit.
 - The Netlify publish directory is the repository root.
 - The site uses a direct email link to `ian@allgoodgrowth.com` instead of a contact form.
 - Public claims remain conservative because Good Growth is still pilot-stage.
+
+
+## Revision v1.4 notes
+
+This revision removes instruction-like/out-of-place visual blocks, separates the Solution section from the How it Works section, restores a Partner audience section, and tightens the founder/contact card with a smaller founder image and credential line.
