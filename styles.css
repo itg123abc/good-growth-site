@@ -903,3 +903,20 @@ h3 {
     animation-iteration-count: 1 !important;
   }
 }
+.hero.section { min-height: auto; padding-block: clamp(3rem, 7vw, 6rem); }
+html body h1 { max-width: 19ch; font-size: clamp(2.5rem, 5vw, 4.7rem); }
+[id] { scroll-margin-top: calc(var(--header-height) + 1.5rem); }
+figure.hero-visual { margin: 0; }
+details { border-bottom: 1px solid #ccd3c7; padding-block: 1rem; }
+summary { cursor: pointer; font-weight: 700; padding-block: .5rem; }
+details p { margin-top: .75rem; }
+a { overflow-wrap: anywhere; }
+@media (max-width: 920px) {
+ body .site-nav { visibility: hidden; }
+ body.nav-open .site-nav { visibility: visible; }
+ body:not(.js-ready) .site-nav { position: static; visibility: visible; opacity: 1; pointer-events: auto; transform: none; }
+ body:not(.js-ready) .header-inner { flex-wrap: wrap; }
+ body:not(.js-ready) .nav-toggle { display: none; }
+ body:not(.js-ready) .site-header { position: relative; }
+}
+@media (max-width: 620px) { body .founder-card-row { grid-template-columns: 1fr; } }
