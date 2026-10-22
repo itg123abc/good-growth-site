@@ -920,3 +920,30 @@ a { overflow-wrap: anywhere; }
  body:not(.js-ready) .site-header { position: relative; }
 }
 @media (max-width: 620px) { body .founder-card-row { grid-template-columns: 1fr; } }
+/* Iteration two: clearer pathways and practical detail. */
+.concept-routes { display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1rem; }
+.concept-routes a { border:1px solid var(--color-line); border-radius:999px; padding:.55rem .8rem; font-size:.85rem; font-weight:700; text-decoration:none; }
+.paths-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.5rem; }
+.path-card { padding:clamp(1.25rem,3vw,2.5rem); background:var(--color-cream); border:1px solid var(--color-line); border-radius:24px; }
+.path-label { display:block; color:var(--color-muted); margin-bottom:1rem; font-size:.85rem; font-weight:700; }
+.path-card h3 { font-size:1.8rem; }
+.path-flow { display:flex; align-items:center; gap:.6rem; padding-block:1.25rem; margin-bottom:1rem; border-block:1px solid var(--color-line); }
+.path-flow span { flex:1; font-weight:700; font-size:.9rem; }
+.section-note { color:var(--color-muted); font-size:.9rem; margin-top:1.5rem; max-width:75ch; }
+.journey-section { background:var(--color-cream); }
+.journey-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1.5rem; list-style:none; padding:0; margin:2.5rem 0 0; }
+.journey-number { display:block; color:var(--color-leaf); font-size:2.5rem; font-weight:700; border-top:1px solid var(--color-moss); padding-top:1rem; margin-bottom:1rem; }
+.journey-grid h3 { font-size:1.35rem; }
+.partner-grid.compact-partner-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.compact-partner-grid .partner-card { padding:1.6rem; display:flex; flex-direction:column; }
+.partner-card a { margin-top:auto; font-weight:700; }
+.faq-layout { display:grid; grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr); gap:clamp(2rem,6vw,5rem); align-items:start; }
+.faq-intro { position:sticky; top:calc(var(--header-height) + 2rem); }
+.faq-answers details:first-child { border-top:1px solid var(--color-line); }
+.faq-answers summary { font-size:1.1rem; line-height:1.5; padding-right:.5rem; }
+.faq-answers p { max-width:70ch; line-height:1.8; padding-bottom:.5rem; }
+summary:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline:3px solid var(--color-leaf); outline-offset:4px; }
+#development .narrow { max-width:850px; }
+@media(max-width:1080px) { .journey-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:920px) { .paths-grid,.faq-layout,.partner-grid.compact-partner-grid { grid-template-columns:1fr; } .faq-intro { position:static; } }
+@media(max-width:620px) { .journey-grid { grid-template-columns:1fr; gap:.75rem; } .path-flow { gap:.4rem; } .path-flow span { font-size:.8rem; } }
