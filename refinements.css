@@ -38,3 +38,7 @@
 @media(max-width:900px){.process-layout{grid-template-columns:1fr;gap:28px}.process-copy{max-width:760px}.process-illustration{max-width:620px}.operating-facts{grid-template-columns:1fr 1fr}.contact-layout{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px}}
 @media(max-width:760px){.contact-layout{grid-template-columns:1fr}.spec-grid,.shared-next-steps{grid-template-columns:1fr;gap:18px}.production-paths .purchase-card{flex-direction:column;align-items:flex-start;gap:16px}.purchase-card .button{white-space:normal}.process-step h3{font-size:20px}.process-illustration figcaption{font-size:12px}.hero-actions{gap:14px 20px}}
 @media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+/* Readability refinements approved October 28. */
+.faq-group h2{border-bottom:3px solid var(--green);padding-bottom:12px;margin-bottom:0}.faq-group details:first-of-type{border-top:0}.mobile-route-copy{display:none}.process-illustration a{display:block}.spec-grid>div:first-child{grid-column:1/-1}
+@media(max-width:760px){.mobile-route-copy{display:block;font-size:14px;line-height:1.6;margin:0 0 20px;padding:14px;background:var(--sage);border-left:3px solid var(--green)}.contact-layout>.next-panel{display:none}}
